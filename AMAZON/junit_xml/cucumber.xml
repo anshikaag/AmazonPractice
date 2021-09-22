@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0">
+    <testcase classname="Signup" name="User is not able to singup the amazon" time="0">
+        <failure message="The scenario has pending or undefined step(s)"><![CDATA[Then Create account form is visible.........................................undefined
+And User enters details "Test1", "7983818749","aanshikaag@gmail.com" , "Anshika1@".undefined
+Then User clicks on Continue button.........................................undefined
+But User is not able to create an account and error message is shown........undefined
+Then Browser gets closed....................................................undefined
+]]></failure>
+    </testcase>
+    <testcase classname="Signup" name="User is not able to singup the amazon 2" time="0">
+        <failure message="The scenario has pending or undefined step(s)"><![CDATA[Then Create account form is visible.........................................undefined
+And User enters details "Test2", "7983818748","aanshika04@gmail.com" , "Anshika1!".undefined
+Then User clicks on Continue button.........................................undefined
+But User is not able to create an account and error message is shown........undefined
+Then Browser gets closed....................................................undefined
+]]></failure>
+    </testcase>
+    <testcase classname="Signup" name="User is not able to singup the amazon 3" time="0">
+        <failure message="The scenario has pending or undefined step(s)"><![CDATA[Then Create account form is visible.........................................undefined
+And User enters details "Test3", "7983887497","aanshika87@gmail.com" , "Anshika1$".undefined
+Then User clicks on Continue button.........................................undefined
+But User is not able to create an account and error message is shown........undefined
+Then Browser gets closed....................................................undefined
+]]></failure>
+    </testcase>
+</testsuite>
