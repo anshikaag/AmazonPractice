@@ -54,39 +54,48 @@ public class Signup {
 
 	@Then("^Create account form is visible$")
 	public void create_account_form_is_visible()  {
+		
 		String Title1= driver.getTitle();
 		Assert.assertEquals("Amazon Registration", Title1);
+		
 	}
 
 	@Then("^User enters details \"([^\"]*)\", \"([^\"]*)\",\"([^\"]*)\" , \"([^\"]*)\"$")
-	public void user_enters_details(String arg1, String arg2, String arg3, String arg4)  {
-	   driver.findElement(By.xpath("//*[@id=\"ap_customer_name\"]")).sendKeys(arg1);
+	public void user_enters_details(String Your_name, String Mobile_number, String Email, String Password)  {
+		
+		driver.findElement(By.xpath("//*[@id=\"ap_customer_name\"]")).sendKeys(Your_name);
 	   //drop down 
 	   //Select select = new Select(driver.findElement(By.xpath("//*[@id=\"auth-country-picker-container\"]/span/span/span")));
 	   //select.selectByVisibleText("IN +91");
 	 
-       driver.findElement(By.xpath("//*[@id=\"ap_phone_number\"]")).sendKeys(arg2);
-       driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys(arg3);
-       driver.findElement(By.xpath("//*[@id=\"ap_password\"]")).sendKeys(arg4);
-	}
+       driver.findElement(By.xpath("//*[@id=\"ap_phone_number\"]")).sendKeys(Mobile_number);
+       driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys(Email);
+       driver.findElement(By.xpath("//*[@id=\"ap_password\"]")).sendKeys(Password);
+		
+		}
 	
 	@Then("^User clicks on Continue button$")
 	public void user_clicks_on_Continue_button() {
-	   WebElement Continue_button= driver.findElement(By.xpath("//*[@id=\"auth-continue\"]"));
+	  
+		WebElement Continue_button= driver.findElement(By.xpath("//*[@id=\"auth-continue\"]"));
 	   Continue_button.click();
+	  
+	   
 	}
 
 	@Then("^User is not able to create an account and error message is shown$")
 	public void user_is_not_able_to_create_an_account_and_error_message_is_shown()  {
+		
 		WebElement Title2= driver.findElement(By.xpath("//*[@id=\"auth-error-message-box\"]/div"));
 	    Assert.assertEquals("There was a problem", Title2);
+		
 		}
 	
 
 	@Then("^Browser gets closed$")
 	public void browser_gets_closed()  {
-	   
+	  
      driver.close();
-
+	  
 	}
 }
